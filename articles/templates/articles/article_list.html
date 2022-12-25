@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Articles</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Article List</h1>
+        <div class="articles">
+            {% for article in articles %}
+                <div class="article">
+                    <h2><a href="#">{{article.title}}</a></h2>
+                    <p>{{article.snippet}}</p>
+                    <h4><em>{{article.date}}</em></h4>
+            {% endfor %}
+        <script src="" async defer></script>
+    </body>
+</html>
