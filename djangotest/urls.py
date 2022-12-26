@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path, re_path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,3 +24,5 @@ urlpatterns = [
     re_path(r'^$', views.homepage),
     path('articles/', include('articles.urls'))
 ]
+
+urlpatterns += staticfiles_urlpatterns()
